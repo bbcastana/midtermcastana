@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+  this is the index page
+{% endblock %}
+
+
+
+{% block body %}
+
+  <ol>
+  {% for post in posts %}
+   <li>
+   <a href ="{% url 'posts:detail' post.id %} "> Post : {{ post.post_text }}  <br /> </a>
+
+   </li>
+    {% endfor %}
+  </ol>
+
+{% endblock %}

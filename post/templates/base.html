@@ -1,0 +1,35 @@
+{% load static %}
+
+
+<html>
+
+
+  <head>
+
+    <title>
+      {% block head %}
+          this is the title head
+      {% endblock %}
+
+    </title>
+    <link rel ="stylesheet" type ="text/css" href="{% static 'post/materialize/css/materialize.min.css' %}">
+    {% block sheets %}
+    {% endblock %}
+  </head>
+
+
+
+  <body>
+    {% block body %}
+      12345
+    {% endblock %}
+    <script src = "{% static 'post/materialize/js/materialize.min.js' %}"></script>
+  </body>
+
+    {% block script %}
+    {% endblock %}
+
+
+
+
+</html>
